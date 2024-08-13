@@ -2,6 +2,7 @@ import React from "react";
 import { SafeAreaView, StyleSheet, Text, View, StatusBar } from "react-native";
 import { Searchbar } from "react-native-paper";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 
 export const RestaurantsScreen = () => {
   return (
@@ -11,7 +12,7 @@ export const RestaurantsScreen = () => {
           <Searchbar />
         </View>
         <View style={styles.listSection}>
-          <Text>List</Text>
+          <RestaurantInfoCard />
         </View>
       </SafeAreaView>
       <ExpoStatusBar style="auto" />
@@ -25,12 +26,12 @@ const styles = StyleSheet.create({
   },
   searchBar: {
     padding: 16,
-    backgroundColor: "green",
+    backgroundColor: "#fff",
     marginTop: StatusBar.currentHeight,
   },
   listSection: {
     flex: 1,
     padding: 16,
-    backgroundColor: "blue",
+    backgroundColor: "#f0f0f0",
   },
 });
